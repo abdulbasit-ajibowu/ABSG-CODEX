@@ -31,18 +31,15 @@ a {
 }
 
 .hero-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 2.4fr) minmax(320px, 1fr);
-  gap: 16px;
+  display: block;
   margin-bottom: 16px;
 }
 
 .hero-banner {
   position: relative;
   min-height: 308px;
-  background:
-    linear-gradient(0deg, rgba(26, 44, 31, 0.52), rgba(26, 44, 31, 0.22)),
-    url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=80") center/cover;
+  background: #1b261d;
+  border-radius: 30px;
 }
 
 .hero-overlay,
@@ -66,13 +63,63 @@ a {
 }
 
 .hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 308px;
+  padding: 14px 18px 0;
+  color: #fff;
+}
+
+.hero-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(292px, 360px);
+  gap: 18px;
+  align-items: start;
+  min-height: 0;
+}
+
+.hero-static-column {
+  min-height: 1px;
+}
+
+.hero-carousel {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}
+
+.hero-carousel .owl-stage-outer,
+.hero-carousel .owl-stage,
+.hero-carousel .owl-item {
+  height: 100%;
+}
+
+.hero-slide {
+  position: relative;
+  min-height: 308px;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-copy {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 18px;
-  height: 100%;
-  padding: 18px 18px 14px;
+  gap: 14px;
+  padding: 4px 0 6px;
+}
+
+.hero-copy-slide {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  z-index: 2;
+  max-width: 500px;
   color: #fff;
+  gap: 18px;
 }
 
 .section-chip,
@@ -87,28 +134,35 @@ a {
 .section-chip {
   background: #cf2038;
   color: #fff;
-  padding: 5px 14px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+}
+
+.hero-copy-body {
+  width: 100%;
 }
 
 .hero-slide h1 {
-  max-width: 620px;
+  max-width: 500px;
   margin: 0;
-  font-size: clamp(1.85rem, 3vw, 2.35rem);
-  line-height: 1.16;
+  font-size: clamp(1.85rem, 3vw, 2.05rem);
+  line-height: 1.2;
   font-weight: 500;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
 }
 
 .hero-dots {
   display: flex;
-  gap: 8px;
-  margin-top: 18px;
+  gap: 7px;
+  margin-top: 16px;
 }
 
 .hero-dots span {
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .hero-dots .active {
@@ -125,22 +179,36 @@ a {
 
 .hero-kicker {
   color: rgba(255, 255, 255, 0.88);
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+}
+
+.hero-dashboard {
+  position: absolute;
+  left: 18px;
+  bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  z-index: 3;
 }
 
 .hero-stats {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .hero-stat {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  min-width: 155px;
-  padding: 8px 14px;
+  gap: 10px;
+  min-width: 0;
+  min-height: 38px;
+  padding: 5px 14px 5px 8px;
   border-radius: 999px;
-  background: rgba(236, 242, 235, 0.45);
+  background: rgba(210, 218, 206, 0.66);
   backdrop-filter: blur(8px);
 }
 
@@ -148,37 +216,102 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.24);
-  font-size: 1.45rem;
+  background: rgba(255, 255, 255, 0.22);
+  font-size: 1.35rem;
   font-weight: 600;
 }
 
+.hero-stat span {
+  color: #fff;
+  font-size: 0.88rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 .hero-announcement {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
-  gap: 10px;
-  margin-top: auto;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 7px 16px;
+  background: rgba(20, 27, 22, 0.62);
+  border-radius: 0;
   color: rgba(255, 255, 255, 0.92);
+  overflow: hidden;
+  z-index: 3;
+}
+
+.hero-announcement-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 18px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.hero-announcement-track {
+  display: flex;
+  align-items: center;
+  gap: 54px;
+  width: max-content;
+  white-space: nowrap;
+  animation: heroTicker 32s linear infinite;
+  animation-play-state: paused;
+  will-change: transform;
+}
+
+.hero-announcement-viewport {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  padding-left: 2px;
+}
+
+.hero-announcement-track span {
+  display: inline-block;
+  font-size: 0.7rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.94);
 }
 
 .birthday-panel {
-  padding: 22px 20px;
+  position: relative;
+  align-self: start;
+  width: 100%;
+  max-width: 360px;
+  margin-left: auto;
+  margin-top: 6px;
+  margin-bottom: 34px;
+  padding: 16px 22px 28px;
   color: #fff;
+  border-radius: 32px;
   background:
     linear-gradient(180deg, rgba(189, 24, 47, 0.96), rgba(171, 24, 41, 0.92)),
     url("https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=900&q=80") center/cover;
+  box-shadow: 0 10px 28px rgba(69, 12, 18, 0.28);
 }
 
 .panel-tabs {
   display: flex;
   gap: 18px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .panel-tabs a {
   color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
@@ -189,10 +322,10 @@ a {
 
 .birthday-item {
   display: grid;
-  grid-template-columns: 54px 1fr 42px 20px;
+  grid-template-columns: 50px 1fr 38px 14px;
   align-items: center;
-  gap: 14px;
-  padding: 13px 0;
+  gap: 12px;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.22);
 }
 
@@ -201,8 +334,8 @@ a {
 }
 
 .birthday-item img {
-  width: 54px;
-  height: 54px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(255, 255, 255, 0.85);
@@ -222,13 +355,24 @@ a {
 }
 
 .birthday-copy h3 {
-  font-size: 1.05rem;
-  margin-bottom: 4px;
+  font-size: 0.94rem;
+  margin-bottom: 2px;
+  line-height: 1.15;
 }
 
 .birthday-copy p,
 .birthday-copy span {
   color: rgba(255, 255, 255, 0.92);
+  line-height: 1.2;
+}
+
+.birthday-copy p {
+  font-size: 0.72rem;
+  margin-bottom: 3px;
+}
+
+.birthday-copy span {
+  font-size: 0.7rem;
 }
 
 .icon-badge,
@@ -239,10 +383,49 @@ a {
 }
 
 .icon-badge {
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.15);
+  font-size: 0.82rem;
+}
+
+.icon-plain {
+  font-size: 0.9rem;
+}
+
+.birthday-slide {
+  padding-bottom: 12px;
+}
+
+.birthday-indicators {
+  position: absolute;
+  left: 22px;
+  bottom: 14px;
+  display: inline-flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.birthday-indicators span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.birthday-indicators span.active {
+  background: #fff;
+}
+
+@keyframes heroTicker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .content-grid {
@@ -673,8 +856,26 @@ a {
       linear-gradient(180deg, #eff5ea 0, #eff5ea 88%, var(--abia-green) 88%, var(--abia-green) 100%);
   }
 
-  .hero-layout {
+  .hero-main {
     grid-template-columns: 1fr;
+  }
+
+  .hero-static-column {
+    min-height: 0;
+  }
+
+  .hero-dashboard {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top: 18px;
+    gap: 10px;
+  }
+
+  .birthday-panel {
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
   }
 
   .content-grid {
@@ -713,16 +914,34 @@ a {
   }
 
   .hero-layout {
-    gap: 12px;
     margin-bottom: 12px;
   }
 
   .hero-banner {
-    min-height: 260px;
+    min-height: 0;
   }
 
   .hero-content {
-    padding: 16px 16px 12px;
+    min-height: 0;
+    padding: 16px 16px 0;
+  }
+
+  .hero-slide {
+    min-height: 0;
+  }
+
+  .hero-copy-slide {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+  }
+
+  .hero-content {
+    position: relative;
+  }
+
+  .hero-main {
     gap: 12px;
   }
 
@@ -748,12 +967,23 @@ a {
   }
 
   .hero-announcement {
-    display: block;
-    font-size: 0.86rem;
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    min-height: 32px;
+    padding: 8px 12px;
+    border-radius: 0 0 18px 18px;
   }
 
   .birthday-panel {
-    padding: 18px 16px;
+    padding: 16px 14px 12px;
+    border-radius: 18px;
+  }
+
+  .birthday-indicators {
+    left: 14px;
+    bottom: 10px;
   }
 
   .content-grid {

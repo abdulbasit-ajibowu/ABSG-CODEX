@@ -8,6 +8,7 @@ function initializeCarousels() {
     loop: true,
     dots: false,
     nav: false,
+    autoHeight: false,
     autoplay: true,
     autoplayTimeout: 5000
   });
@@ -15,8 +16,9 @@ function initializeCarousels() {
   jQuery(".birthday-carousel").owlCarousel({
     items: 1,
     loop: true,
-    dots: true,
+    dots: false,
     nav: false,
+    autoHeight: true,
     autoplay: true,
     autoplayTimeout: 4500
   });
@@ -120,4 +122,10 @@ function initializeNavigation() {
 document.addEventListener("partials:loaded", () => {
   initializeNavigation();
   initializeCarousels();
+
+  window.setTimeout(() => {
+    document.querySelectorAll(".hero-announcement-track").forEach((track) => {
+      track.style.animationPlayState = "running";
+    });
+  }, 3000);
 });
