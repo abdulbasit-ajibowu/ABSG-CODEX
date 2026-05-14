@@ -9,8 +9,13 @@ function initializeCarousels() {
     dots: false,
     nav: false,
     autoHeight: false,
-    autoplay: false,
-    smartSpeed: 650
+    autoplay: true,
+    autoplayTimeout: 5500,
+    autoplayHoverPause: true,
+    smartSpeed: 650,
+    touchDrag: true,
+    mouseDrag: true,
+    pullDrag: true
   });
 
   jQuery(".birthday-carousel").owlCarousel({
@@ -20,6 +25,17 @@ function initializeCarousels() {
     nav: false,
     autoHeight: true,
     autoplay: false
+  });
+
+  jQuery(".birthday-mobile-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    dots: false,
+    nav: false,
+    autoHeight: true,
+    autoplay: false,
+    touchDrag: true,
+    mouseDrag: true
   });
 
   jQuery(".gallery-carousel").owlCarousel({
@@ -59,6 +75,7 @@ function initializeCarousels() {
 
   setupCarouselDots(".hero-carousel", '[data-carousel-dots="hero"]');
   setupCarouselDots(".birthday-carousel", '[data-carousel-dots="birthday"]');
+  setupCarouselDots(".birthday-mobile-carousel", '[data-carousel-dots="birthday-mobile"]');
   setupCarouselDots(".gallery-carousel", '[data-carousel-dots="gallery"]');
   setupCarouselDots(".events-carousel", '[data-carousel-dots="events"]');
   setupCarouselDots(".appointee-carousel", '[data-carousel-dots="appointee"]');
@@ -106,10 +123,17 @@ function initializeNavigation() {
   const desktopToggle = document.querySelector(".ministries-toggle");
   const mobileToggle = document.querySelector(".mobile-sub-toggle");
   const siteNav = document.querySelector("#siteNav");
+  const navLinks = Array.from(document.querySelectorAll(".site-nav-list .nav-link"));
 
-  if (!megaItem || !desktopToggle) {
+  if (!megaItem || !desktopToggle || !navLinks.length) {
     return;
   }
+
+  const setActiveLink = (targetLink) => {
+    navLinks.forEach((link) => {
+      link.classList.toggle("active", link === targetLink);
+    });
+  };
 
   const setMenuState = (isOpen) => {
     megaItem.classList.toggle("is-open", isOpen);
@@ -125,13 +149,17 @@ function initializeNavigation() {
       event.preventDefault();
     }
 
+    setActiveLink(desktopToggle);
     setMenuState(!megaItem.classList.contains("is-open"));
   };
+
+  const matchingLink = navLinks.find((link) => link.getAttribute("href") === window.location.hash);
 
   if (siteNav) {
     siteNav.classList.remove("show");
   }
 
+  setActiveLink(matchingLink || navLinks[0]);
   setMenuState(false);
 
   desktopToggle.addEventListener("click", toggleMenu);
@@ -139,6 +167,17 @@ function initializeNavigation() {
   if (mobileToggle) {
     mobileToggle.addEventListener("click", toggleMenu);
   }
+
+  navLinks.forEach((link) => {
+    if (link === desktopToggle) {
+      return;
+    }
+
+    link.addEventListener("click", () => {
+      setActiveLink(link);
+      setMenuState(false);
+    });
+  });
 }
 
 document.addEventListener("partials:loaded", () => {

@@ -11,9 +11,9 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="css/navigation.css" rel="stylesheet">
-  <link href="css/footer.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/navigation.css?v=20260514c" rel="stylesheet">
+  <link href="css/footer.css?v=20260514c" rel="stylesheet">
+  <link href="css/style.css?v=20260514c" rel="stylesheet">
 </head>
 <body>
   <div data-include="partials/navigation.html"></div>
@@ -51,7 +51,7 @@
               <div class="hero-main">
                 <div class="hero-static-column"></div>
 
-                <aside class="birthday-panel">
+                <aside class="birthday-panel hero-birthday-panel">
                   <div class="panel-tabs">
                     <a href="#" class="active">Birthdays (6)</a>
                     <a href="#">Polls</a>
@@ -185,6 +185,60 @@
               <div class="app-tile app-infor"><img class="app-icon" src="assets/images/infor-icon.png" alt="Infor PS"><small>Infor PS</small></div>
               <div class="app-tile app-metabase"><img class="app-icon" src="assets/images/metabase-icon.png" alt="Metabase"><small>Metabase</small></div>
             </div>
+          </section>
+
+          <section class="birthday-card-mobile card-panel">
+            <div class="panel-tabs">
+              <a href="#" class="active">Birthdays (6)</a>
+              <a href="#">Polls</a>
+            </div>
+            <div class="owl-carousel birthday-mobile-carousel">
+              <div class="birthday-slide">
+                <article class="birthday-item">
+                  <img src="assets/images/potrait.png" alt="Birthday celebrant">
+                  <div class="birthday-copy">
+                    <h3>Jason Adetay Ebenizer</h3>
+                    <p>Research and Development</p>
+                    <span>12th August, 2025</span>
+                  </div>
+                  <button class="icon-badge" type="button"><i class="bi bi-balloon-fill"></i></button>
+                  <button class="icon-plain" type="button"><i class="bi bi-three-dots-vertical"></i></button>
+                </article>
+                <article class="birthday-item">
+                  <img src="assets/images/potrait.png" alt="Birthday celebrant">
+                  <div class="birthday-copy">
+                    <h3>Jason Adetay Ebenizer</h3>
+                    <p>Research and Development</p>
+                    <span>12th August, 2025</span>
+                  </div>
+                  <button class="icon-badge" type="button"><i class="bi bi-balloon-fill"></i></button>
+                  <button class="icon-plain" type="button"><i class="bi bi-three-dots-vertical"></i></button>
+                </article>
+              </div>
+              <div class="birthday-slide">
+                <article class="birthday-item">
+                  <img src="assets/images/potrait.png" alt="Birthday celebrant">
+                  <div class="birthday-copy">
+                    <h3>Jason Adetay Ebenizer</h3>
+                    <p>Research and Development</p>
+                    <span>12th August, 2025</span>
+                  </div>
+                  <button class="icon-badge" type="button"><i class="bi bi-balloon-fill"></i></button>
+                  <button class="icon-plain" type="button"><i class="bi bi-three-dots-vertical"></i></button>
+                </article>
+                <article class="birthday-item">
+                  <img src="assets/images/potrait.png" alt="Birthday celebrant">
+                  <div class="birthday-copy">
+                    <h3>Jason Adetay Ebenizer</h3>
+                    <p>Research and Development</p>
+                    <span>12th August, 2025</span>
+                  </div>
+                  <button class="icon-badge" type="button"><i class="bi bi-balloon-fill"></i></button>
+                  <button class="icon-plain" type="button"><i class="bi bi-three-dots-vertical"></i></button>
+                </article>
+              </div>
+            </div>
+            <div class="carousel-dots birthday-mobile-dots" data-carousel-dots="birthday-mobile" aria-label="Birthday mobile slides"></div>
           </section>
 
           <section class="quote-card card-panel image-card">
@@ -387,13 +441,13 @@
 
           <section class="numbers-card card-panel">
             <div class="section-head">
-              <h2>Government in Numbers</h2>
+              <h2>Government in numbers</h2>
             </div>
             <div class="metric-list">
               <a href="#"><span><img src="assets/images/heart.png" alt=""> Initiatives</span><em>2</em><i class="bi bi-chevron-right"></i></a>
               <a href="#"><span><img src="assets/images/leafIcon.png" alt=""> Projects</span><em>2</em><i class="bi bi-chevron-right"></i></a>
               <a href="#"><span><img src="assets/images/buildingIcon.png" alt=""> Tasks</span><em>2</em><i class="bi bi-chevron-right"></i></a>
-              <a href="#"><span><img src="assets/images/pointer.png" alt=""> Undertakings</span><em>2</em><i class="bi bi-chevron-right"></i></a>
+              <a class="metric-undertakings" href="#"><span><img src="assets/images/pointer.png" alt=""> Undertakings</span><em>2</em><i class="bi bi-chevron-right"></i></a>
               <a href="#"><span><img src="assets/images/moneyBag.png" alt=""> Activities</span><em>2</em><i class="bi bi-chevron-right"></i></a>
               <a class="disabled" href="#"><span><img src="assets/images/ballIcon.png" alt=""> Ventures</span><em>2</em><i class="bi bi-chevron-right"></i></a>
             </div>
@@ -409,7 +463,7 @@
               <a href="#"><span><img src="assets/images/benefitsIcon.png" alt=""> Benefits Portal</span><i class="bi bi-chevron-right"></i></a>
               <a href="#"><span><img src="assets/images/spannerIcon.png" alt=""> IT Help Desk</span><i class="bi bi-chevron-right"></i></a>
               <a href="#"><span><img src="assets/images/forms.png" alt=""> Policy Forms</span><i class="bi bi-chevron-right"></i></a>
-              <a class="is-disabled" href="#"><span><img src="assets/images/trainingIcon.png" alt=""> Training Portal</span><i class="bi bi-chevron-right"></i></a>
+              <a class="is-disabled quick-link-training" href="#"><span><img src="assets/images/trainingIcon.png" alt=""> Training Portal</span><i class="bi bi-chevron-right"></i></a>
             </div>
           </section>
         </div>
@@ -422,7 +476,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="js/include-partials.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/include-partials.js?v=20260514c"></script>
+  <script src="js/main.js?v=20260514c"></script>
 </body>
 </html>
