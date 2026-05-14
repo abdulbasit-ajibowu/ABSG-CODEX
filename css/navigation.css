@@ -193,7 +193,7 @@
   right: 0;
   top: 100%;
   display: none;
-  padding: 12px 0 0;
+  /* padding: 12px 0 0; */
 }
 
 .nav-item-mega.is-open .ministries-panel {
