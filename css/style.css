@@ -293,7 +293,7 @@ a {
   color: rgba(255, 255, 255, 0.92);
   overflow: hidden;
   z-index: 3;
-  padding-right: calc(364px + 32px);
+  /* padding-right: calc(364px + 32px); */
 }
 
 .hero-announcement-label {
@@ -453,7 +453,7 @@ a {
 }
 
 .icon-plain {
-  font-size: 0.86rem;
+  font-size: 0.7rem;
 }
 
 .birthday-slide {
