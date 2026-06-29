@@ -34,6 +34,17 @@ Do not rely on code inspection alone.
 Do not make broad redesigns.
 Do not change unrelated sections.
 
+## Carousel
+
+**Always use Bootstrap Carousel** — never Owl Carousel or any other third-party carousel library.
+
+Bootstrap Carousel is built into Bootstrap 5.3.3 (already loaded). Structure:
+- Outer: `<div id="..." class="carousel slide [custom-class]" data-bs-ride="..." data-bs-wrap="true" data-bs-touch="true">`
+- Inner: `<div class="carousel-inner [h-100 if full-height]">`
+- Slides: `<div class="carousel-item [active on first]">` — wrap existing slide content inside
+- Dots: `<div class="carousel-dots [name]-dots">` with `<button class="carousel-dot [active on first]">` — placed outside the carousel div but inside the card section
+- JS: use `new bootstrap.Carousel(el, options)` and `setupCarouselDots(el, selector)` from `main.js`
+
 ## Key Instructions
 
 - Always inspect the `design/` folder first. The design assets there are the single source of truth.

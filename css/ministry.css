@@ -1,0 +1,544 @@
+/* Ministry page — ministry-specific styles only */
+
+/* ── Hero grid — portrait card column width ── */
+.ministry-hero-main {
+  grid-template-columns: minmax(0, 1fr) 230px !important;
+  align-items: stretch !important;
+}
+
+/* ── Hero: Commissioner portrait card ── */
+.ministry-official-panel {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  align-self: stretch;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.36);
+}
+
+.ministry-official-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.ministry-official-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(0, 0, 0, 0.78) 100%);
+}
+
+.ministry-official-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 12px 12px;
+}
+
+.ministry-official-info strong {
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.ministry-official-info span {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* ministry-hero-desc lives inside .hero-copy-slide inside the slide */
+.ministry-hero-desc {
+  font-size: 0.94rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.52;
+  margin: 8px 0 0;
+  max-width: 420px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* No announcement bar on ministry page — collapse bottom clearance */
+.hero-banner {
+  --hero-clear: 0;
+}
+
+.hero-content {
+  padding-bottom: 18px;
+}
+
+/* Larger hero heading on ministry banner */
+.hero-slide h1 {
+  font-size: clamp(2.2rem, 3.2vw, 3rem);
+}
+
+/* ── Ministry tabs card — fixed height, scrollable body ── */
+.ministry-tabs-card {
+  padding: 0;
+  overflow: hidden;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ministry-tabs-nav {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--abia-border);
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex-shrink: 0;
+}
+
+.ministry-tabs-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.ministry-tab-btn {
+  padding: 14px 16px 13px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--abia-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s;
+  margin-bottom: -1px;
+  flex-shrink: 0;
+}
+
+.ministry-tab-btn.active {
+  color: var(--abia-ink);
+  font-weight: 700;
+  border-bottom-color: var(--abia-green);
+}
+
+.ministry-tabs-body {
+  padding: 22px 24px 24px;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* About tab */
+.ministry-about-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.ministry-about-meta p {
+  margin: 0;
+  font-size: 0.84rem;
+  color: var(--abia-muted);
+}
+
+.ministry-about-meta p strong {
+  color: var(--abia-ink);
+  font-weight: 600;
+}
+
+.ministry-section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--abia-ink);
+  margin: 0 0 8px;
+}
+
+.ministry-body-text {
+  font-size: 0.85rem;
+  color: #4d5651;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+.ministry-mission-list {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ministry-mission-list li {
+  font-size: 0.85rem;
+  color: #4d5651;
+  line-height: 1.55;
+  padding-left: 14px;
+  position: relative;
+}
+
+.ministry-mission-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--abia-green);
+  font-weight: 700;
+}
+
+/* Departments tab */
+.dept-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background: #f2f4f0;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.dept-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 16px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--abia-border);
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--abia-ink);
+  background: #fff;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.dept-item:hover {
+  border-color: var(--abia-green);
+  background: var(--abia-green-soft);
+  color: var(--abia-green);
+}
+
+.dept-item i {
+  font-size: 0.76rem;
+  color: var(--abia-muted);
+  flex-shrink: 0;
+}
+
+.dept-item:hover i {
+  color: var(--abia-green);
+}
+
+/* Leadership tab */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  background: #f2f4f0;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.leader-card {
+  border-radius: 12px;
+  overflow: visible;
+  border: 1px solid var(--abia-border);
+  background: #fff;
+  padding: 10px 10px 14px;
+}
+
+.leader-card-photo {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.leader-card-body {
+  padding: 0 2px;
+}
+
+.leader-card-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--abia-ink);
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.leader-card-title {
+  font-size: 0.76rem;
+  color: var(--abia-muted);
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Key Initiatives tab */
+.initiative-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.initiative-item {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--abia-border);
+}
+
+.initiative-item:first-child {
+  padding-top: 0;
+}
+
+.initiative-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.initiative-title {
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--abia-ink);
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+.initiative-desc {
+  font-size: 0.84rem;
+  color: #2c8c5a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Ministry Docs / Learning Materials ── */
+.ministry-docs-card {
+  padding: 20px 24px 22px;
+}
+
+.ministry-docs-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ministry-docs-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ministry-docs-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--abia-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ministry-docs-title {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--abia-ink);
+  margin: 0;
+}
+
+.ministry-docs-filter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--abia-muted);
+  flex-shrink: 0;
+}
+
+.ministry-docs-filter select {
+  border: 1px solid var(--abia-border);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-family: "Instrument Sans", sans-serif;
+  color: var(--abia-ink);
+  background: #fff;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2365716b'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 24px;
+}
+
+.ministry-docs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ministry-docs-table thead th {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--abia-muted);
+  text-align: left;
+  padding: 0 10px 10px;
+  border-bottom: 1px solid var(--abia-border);
+}
+
+.ministry-docs-table thead th:first-child {
+  padding-left: 0;
+}
+
+.ministry-docs-table tbody tr {
+  border-bottom: 1px solid var(--abia-border);
+  transition: background 0.12s;
+}
+
+.ministry-docs-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.ministry-docs-table tbody tr:hover {
+  background: var(--abia-green-soft);
+}
+
+.ministry-docs-table td {
+  padding: 10px 10px;
+  font-size: 0.83rem;
+  color: var(--abia-ink);
+  vertical-align: middle;
+}
+
+.ministry-docs-table td:first-child {
+  padding-left: 0;
+}
+
+.doc-file-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.doc-file-cell i {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  flex-shrink: 0;
+}
+
+.doc-modifier-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.doc-modifier-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.doc-modifier-name {
+  font-size: 0.8rem;
+  color: var(--abia-ink);
+}
+
+.doc-date-cell {
+  color: var(--abia-muted);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+/* ── Narrow docs card (col-3 on lg+): hide date & modifier columns ── */
+@media (min-width: 992px) {
+  .ministry-docs-table th:nth-child(2),
+  .ministry-docs-table th:nth-child(3),
+  .ministry-docs-table td:nth-child(2),
+  .ministry-docs-table td:nth-child(3) {
+    display: none;
+  }
+}
+
+/* ── Responsive ── */
+
+/* Below 1000px: hide portrait, collapse hero grid to single column */
+@media (max-width: 999.98px) {
+  .ministry-hero-main {
+    grid-template-columns: 1fr !important;
+  }
+
+  .ministry-official-panel {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .ministry-tabs-card {
+    height: 380px;
+  }
+
+  .ministry-tabs-body {
+    overflow-y: auto;
+    padding: 16px 16px 18px;
+  }
+
+  .ministry-tabs-nav {
+    padding: 0 16px;
+  }
+
+  .ministry-tab-btn {
+    padding: 12px 12px 11px;
+    font-size: 0.82rem;
+  }
+
+  .dept-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .leadership-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .leader-card-photo {
+    height: 160px;
+  }
+
+  .ministry-docs-card {
+    padding: 16px 16px 18px;
+  }
+
+  .ministry-docs-table thead th,
+  .ministry-docs-table td {
+    font-size: 0.76rem;
+    padding: 8px 6px;
+  }
+
+  .ministry-hero-desc {
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .dept-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leadership-grid {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+  }
+
+  .ministry-docs-filter {
+    display: none;
+  }
+
+  .doc-modifier-cell {
+    display: none;
+  }
+}

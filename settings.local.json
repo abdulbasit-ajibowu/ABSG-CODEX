@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -v \"^d.*\\\\.$\")",
+      "Bash(grep -v \"^d.*\\\\.\\\\.$\")",
+      "Bash(node dev-server.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:4173/)",
+      "Bash(cd /tmp)",
+      "Bash(which chromium-cli *)",
+      "Bash(which chromium *)",
+      "Bash(node -e \"const {execSync}=require\\('child_process'\\);try{execSync\\('chromium-cli --version'\\);console.log\\('chromium-cli found'\\)}catch{console.log\\('not found'\\)}\")",
+      "Bash(ls /usr/bin/chrom*)",
+      "Bash(curl -s http://127.0.0.1:4173/)",
+      "PowerShell(npx --yes playwright --version 2>&1 | Select-Object -First 3)",
+      "PowerShell(Tail *)",
+      "PowerShell(npx playwright install chromium 2>&1 | Select-Object -Last 5)",
+      "Bash(node *)"
+    ]
+  }
+}

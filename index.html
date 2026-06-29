@@ -8,12 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="css/navigation.css?v=20260514c" rel="stylesheet">
-  <link href="css/footer.css?v=20260514c" rel="stylesheet">
-  <link href="css/style.css?v=20260514c" rel="stylesheet">
+  <link href="css/navigation.css?v=20260623a" rel="stylesheet">
+  <link href="css/footer.css?v=20260601c" rel="stylesheet">
+  <link href="css/style.css?v=20260623d" rel="stylesheet">
 </head>
 <body>
   <div data-include="partials/navigation.html"></div>
@@ -23,96 +21,59 @@
       <div class="container-fluid shell-container">
         <div class="hero-layout">
           <div class="hero-banner card-panel overflow-hidden">
-            <div class="owl-carousel hero-carousel">
-              <article class="hero-slide">
-                <img class="hero-media" src="assets/images/meeting-photo.jpg" alt="Aerial view of a river in Abia State">
-                <div class="hero-overlay"></div>
-                <div class="hero-copy hero-copy-slide">
-                  <span class="section-chip">Beauty of Abia</span>
-                  <div class="hero-copy-body">
-                    <h1>This is a River called Azumini Blue River. Located in Abia State, Nigerian Eastern Region</h1>
+            <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="5500" data-bs-wrap="true" data-bs-pause="hover" data-bs-touch="true">
+              <div class="carousel-inner">
+                <article class="carousel-item hero-slide">
+                  <img class="hero-media" src="assets/images/meeting-photo.jpg" alt="Aerial view of a river in Abia State">
+                  <div class="hero-overlay"></div>
+                  <div class="hero-copy hero-copy-slide">
+                    <span class="section-chip">Beauty of Abia</span>
+                    <div class="hero-copy-body">
+                      <h1>This is a River called Azumini Blue River. Located in Abia State, Nigerian Eastern Region</h1>
+                    </div>
                   </div>
-                </div>
-              </article>
-              <article class="hero-slide">
-                <img class="hero-media" src="assets/images/gallery.jpg" alt="An official activity scene in Abia State">
-                <div class="hero-overlay"></div>
-                <div class="hero-copy hero-copy-slide">
-                  <span class="section-chip">Beauty of Abia</span>
-                  <div class="hero-copy-body">
-                    <h1>Discover the people, places and public moments shaping everyday life across Abia State</h1>
+                </article>
+                <article class="carousel-item  hero-slide">
+                  <img class="hero-media" src="assets/images/gallery.jpg" alt="An official activity scene in Abia State">
+                  <div class="hero-overlay"></div>
+                  <div class="hero-copy hero-copy-slide">
+                    <span class="section-chip">Beauty of Abia</span>
+                    <div class="hero-copy-body">
+                      <h1>Discover the people, places and public moments shaping everyday life across Abia State</h1>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </div>
+              <div class="carousel-indicators hero-dots">
+                <!-- <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button> -->
+              </div>
             </div>
-            <div class="carousel-dots hero-dots" data-carousel-dots="hero" aria-label="Hero slides"></div>
 
             <div class="hero-content">
               <div class="hero-main">
                 <div class="hero-static-column"></div>
 
                 <aside class="birthday-panel hero-birthday-panel">
-                  <div class="panel-tabs">
-                    <a href="#" class="active">Birthdays (6)</a>
-                    <a href="#">Polls</a>
+                  <div class="wotd-label">
+                    <span class="section-chip">Word of the Day</span>
+                    <span class="wotd-date">June 1, 2026</span>
                   </div>
-                  <div class="owl-carousel birthday-carousel">
-                    <div class="birthday-slide">
-                      <article class="birthday-item">
-                        <img src="assets/images/potrait.png" alt="Birthday celebrant">
-                        <div class="birthday-copy">
-                          <h3>Jason Adetay Ebenezer</h3>
-                          <p>Research and Development</p>
-                          <span>12th August, 2025</span>
+                  <div class="wotd-body">
+                    <blockquote class="wotd-quote">
+                      "It is either you are prepared to work for Abia with sincerity of purpose, or you remain in your comfort zone. Excellence is not a request — it is our standard."
+                    </blockquote>
+                    <div class="wotd-footer">
+                      <div class="wotd-meta">
+                        <img src="assets/images/gov.jpg" alt="Governor Alex Otti">
+                        <div class="wotd-meta-text">
+                          <strong>His Excellency, Gov. Alex Otti</strong>
+                          <span>Governor of Abia State</span>
                         </div>
-                        <button class="icon-badge" type="button"><i class="bi bi-balloon-fill"></i></button>
-                        <button class="icon-plain" type="button"><i class="bi bi-three-dots-vertical"></i></button>
-                      </article>
-                      <article class="birthday-item">
-                        <img src="assets/images/potrait.png" alt="Birthday celebrant">
-                        <div class="birthday-copy">
-                          <h3>Jason Adetay Ebenezer</h3>
-                          <p>Research and Development</p>
-                          <span>12th August, 2025</span>
-                        </div>
-                        <button class="icon-badge" type="button"><i class="bi bi-balloon-fill"></i></button>
-                        <button class="icon-plain" type="button"><i class="bi bi-three-dots-vertical"></i></button>
-                      </article>
-                    </div>
-                    <div class="birthday-slide">
-                      <article class="birthday-item">
-                        <img src="assets/images/potrait.png" alt="Birthday celebrant">
-                        <div class="birthday-copy">
-                          <h3>Jason Adetay Ebenezer</h3>
-                          <p>Research and Development</p>
-                          <span>12th August, 2025</span>
-                        </div>
-                        <button class="icon-badge" type="button"><i class="bi bi-balloon-fill"></i></button>
-                        <button class="icon-plain" type="button"><i class="bi bi-three-dots-vertical"></i></button>
-                      </article>
-                      <article class="birthday-item">
-                        <img src="assets/images/potrait.png" alt="Birthday celebrant">
-                        <div class="birthday-copy">
-                          <h3>Jason Adetay Ebenezer</h3>
-                          <p>Research and Development</p>
-                          <span>12th August, 2025</span>
-                        </div>
-                        <button class="icon-badge" type="button"><i class="bi bi-balloon-fill"></i></button>
-                        <button class="icon-plain" type="button"><i class="bi bi-three-dots-vertical"></i></button>
-                      </article>
+                      </div>
                     </div>
                   </div>
-                  <div class="carousel-dots birthday-dots" data-carousel-dots="birthday" aria-label="Birthday slides"></div>
                 </aside>
-              </div>
-
-              <div class="hero-dashboard">
-                <p class="hero-kicker mb-0">Dashboard</p>
-                <div class="hero-stats">
-                  <div class="hero-stat"><strong>3</strong><span>Active Employee</span></div>
-                  <div class="hero-stat"><strong>3</strong><span>Open position</span></div>
-                  <div class="hero-stat"><strong>3</strong><span>Active Projects</span></div>
-                </div>
               </div>
 
               <div class="hero-announcement">
@@ -127,290 +88,294 @@
           </div>
         </div>
 
-        <div class="content-grid">
-          <section class="news-card card-panel">
+        <div class="row g-3">
+          <div class="col-12 col-md-8">
+          <section class="news-card card-panel h-100">
             <div class="section-head">
               <h2>News and Updates</h2>
               <a href="#">View All News <i class="bi bi-arrow-right"></i></a>
             </div>
             <div class="news-grid">
               <article class="news-feature">
-                <span class="subtle-label">Latest News</span>
-                <h3>Abia CP distributes refurbished vans to Divisions, charges officers to go after criminals</h3>
-                <p>The Commissioner of Police in Abia State Police Command, Danladi Isa has charged the men and officers of the Command to promptly and proficiently go after criminal elements in the State...</p>
-                <div class="meta-line">August 8, 2025 <span>|</span> 8:15AM</div>
-                <a class="cta-pill" href="#">Continue reading <i class="bi bi-eye"></i></a>
+                <div class="news-feature-cover">
+                  <img src="assets/images/meeting-photo.jpg" alt="Latest News">
+                  <div class="news-cover-overlay"></div>
+                  <span class="news-badge">Latest News</span>
+                </div>
+                <div class="news-feature-body">
+                  <h3>Abia CP distributes refurbished vans to Divisions, charges officers to go after criminals</h3>
+                  <p>The Commissioner of Police in Abia State Police Command, Danladi Isa has charged the men and officers of the Command to promptly and proficiently go after criminal elements in the State...</p>
+                  <div class="news-feature-footer">
+                    <div class="meta-line"><i class="bi bi-calendar3"></i> Aug 8, 2025 <span>|</span> 8:15AM</div>
+                    <a class="cta-pill" href="#">Continue reading <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
               </article>
               <div class="news-list">
-                <article class="news-mini">
-                  <img src="assets/images/articleOne.png" alt="News">
-                  <div>
+                <a href="#" class="news-mini">
+                  <div class="news-mini-img">
+                    <img src="assets/images/articleOne.png" alt="News">
+                  </div>
+                  <div class="news-mini-body">
+                    <span class="news-mini-tag">Government</span>
                     <h4>Government Holds Wreath-laying Ceremony for Helicopter Crash Victims</h4>
-                    <div class="meta-line">August 8, 2025 <span>|</span> 11:00 AM</div>
-                    <a href="#"><i class="bi bi-arrow-right"></i></a>
+                    <div class="meta-line"><i class="bi bi-clock"></i> Aug 8, 2025 &middot; 11:00 AM</div>
                   </div>
-                </article>
-                <article class="news-mini">
-                  <img src="assets/images/articleTwo.png" alt="News">
-                  <div>
+                </a>
+                <a href="#" class="news-mini">
+                  <div class="news-mini-img">
+                    <img src="assets/images/articleTwo.png" alt="News">
+                  </div>
+                  <div class="news-mini-body">
+                    <span class="news-mini-tag">Security</span>
                     <h4>Deadly ambush: Russian soldiers killed while waiting for a pep talk</h4>
-                    <div class="meta-line">August 8, 2025 <span>|</span> 11:00 AM</div>
-                    <a href="#"><i class="bi bi-arrow-right"></i></a>
+                    <div class="meta-line"><i class="bi bi-clock"></i> Aug 8, 2025 &middot; 9:00 AM</div>
                   </div>
-                </article>
+                </a>
+                <a href="#" class="news-mini">
+                  <div class="news-mini-img">
+                    <img src="assets/images/articleOne.png" alt="News">
+                  </div>
+                  <div class="news-mini-body">
+                    <span class="news-mini-tag">Economy</span>
+                    <h4>Abia State Records 18% Growth in IGR for Q1 2025 Fiscal Year</h4>
+                    <div class="meta-line"><i class="bi bi-clock"></i> Aug 7, 2025 &middot; 2:00 PM</div>
+                  </div>
+                </a>
               </div>
             </div>
           </section>
+          </div>
 
-          <section class="apps-card card-panel card-dark">
+          <div class="col-12 col-md-4">
+          <section class="apps-card card-panel card-dark h-100">
             <div class="section-head app-section-head">
               <h2>Applications</h2>
-              <a href="#">See all <i class="bi bi-arrow-right"></i></a>
             </div>
             <div class="app-grid">
-              <div class="app-tile app-outlook"><img class="app-icon" src="assets/images/outlook-icon.png" alt="Outlook"><small>Outlook</small></div>
-              <div class="app-tile app-odoo"><img class="app-icon" src="assets/images/odoo-icon.png" alt="Odoo"><small>Odoo</small></div>
-              <div class="app-tile app-peoplesoft"><img class="app-icon" src="assets/images/peoplesoft-icon.png" alt="PeopleSoft"><small>PeopleSoft</small></div>
-              <div class="app-tile app-sap"><img class="app-icon" src="assets/images/sap-icon.png" alt="SAP"><small>SAP</small></div>
-              <div class="app-tile app-dynamics"><img class="app-icon" src="assets/images/dynamics-icon.png" alt="Dynamics 365"><small>Dynamics 365</small></div>
-              <div class="app-tile app-opengov"><img class="app-icon" src="assets/images/openGov-icon.png" alt="OpenGov"><small>OpenGov</small></div>
-              <div class="app-tile app-jira"><img class="app-icon" src="assets/images/jira.png" alt="Jira"><small>Jira</small></div>
-              <div class="app-tile app-egov"><img class="app-icon" src="assets/images/eGov.png" alt="eGov Fdn"><small>eGov Fdn</small></div>
-              <div class="app-tile app-unit4"><img class="app-icon" src="assets/images/unit4-icon.png" alt="Unit4"><small>Unit4</small></div>
-              <div class="app-tile app-erpnext"><img class="app-icon" src="assets/images/ErpIcon.png" alt="ERPNext"><small>ERPNext</small></div>
-              <div class="app-tile app-infor"><img class="app-icon" src="assets/images/infor-icon.png" alt="Infor PS"><small>Infor PS</small></div>
-              <div class="app-tile app-metabase"><img class="app-icon" src="assets/images/metabase-icon.png" alt="Metabase"><small>Metabase</small></div>
-              <div class="app-tile app-unit4"><img class="app-icon" src="assets/images/unit4-icon.png" alt="Unit4"><small>Unit4</small></div>
-              <div class="app-tile app-erpnext"><img class="app-icon" src="assets/images/ErpIcon.png" alt="ERPNext"><small>ERPNext</small></div>
-              <div class="app-tile app-infor"><img class="app-icon" src="assets/images/infor-icon.png" alt="Infor PS"><small>Infor PS</small></div>
-              <div class="app-tile app-metabase"><img class="app-icon" src="assets/images/metabase-icon.png" alt="Metabase"><small>Metabase</small></div>
+              <a href="#" class="app-tile"><img class="app-icon" src="assets/images/outlook-icon.png" alt="Outlook"><small>Outlook</small></a>
+              <a href="#" class="app-tile"><img class="app-icon" src="assets/images/odoo-icon.png" alt="Odoo"><small>Odoo</small></a>
+              <a href="#" class="app-tile app-peoplesoft"><img class="app-icon" src="assets/images/peoplesoft-icon.png" alt="PeopleSoft"><small>PeopleSoft</small></a>
+              <a href="#" class="app-tile app-sap"><img class="app-icon" src="assets/images/sap-icon.png" alt="SAP"><small>SAP</small></a>
+              <a href="#" class="app-tile app-dynamics"><img class="app-icon" src="assets/images/dynamics-icon.png" alt="Dynamics 365"><small>Dynamics 365</small></a>
+              <a href="#" class="app-tile app-opengov"><img class="app-icon" src="assets/images/openGov-icon.png" alt="OpenGov"><small>OpenGov</small></a>
+              <a href="#" class="app-tile app-jira"><img class="app-icon" src="assets/images/jira.png" alt="Jira"><small>Jira</small></a>
+              <a href="#" class="app-tile app-egov"><img class="app-icon" src="assets/images/eGov.png" alt="eGov Fdn"><small>eGov Fdn</small></a>
+              <a href="#" class="app-tile app-unit4"><img class="app-icon" src="assets/images/unit4-icon.png" alt="Unit4"><small>Unit4</small></a>
+              <a href="#" class="app-tile app-erpnext"><img class="app-icon" src="assets/images/ErpIcon.png" alt="ERPNext"><small>ERPNext</small></a>
+              <a href="#" class="app-tile app-infor"><img class="app-icon" src="assets/images/infor-icon.png" alt="Infor PS"><small>Infor PS</small></a>
+              <a href="#" class="app-tile app-metabase"><img class="app-icon" src="assets/images/metabase-icon.png" alt="Metabase"><small>Metabase</small></a>
+              <a href="#" class="app-tile app-unit4"><img class="app-icon" src="assets/images/unit4-icon.png" alt="Unit4"><small>Unit4</small></a>
+              <a href="#" class="app-tile app-erpnext"><img class="app-icon" src="assets/images/ErpIcon.png" alt="ERPNext"><small>ERPNext</small></a>
+              <a href="#" class="app-tile app-infor"><img class="app-icon" src="assets/images/infor-icon.png" alt="Infor PS"><small>Infor PS</small></a>
+              <a href="#" class="app-tile app-metabase"><img class="app-icon" src="assets/images/metabase-icon.png" alt="Metabase"><small>Metabase</small></a>
             </div>
           </section>
+          </div>
 
-          <section class="birthday-card-mobile card-panel">
-            <div class="panel-tabs">
-              <a href="#" class="active">Birthdays (6)</a>
-              <a href="#">Polls</a>
+          <div class="col-12 d-md-none">
+          <section class="birthday-card-mobile card-panel card-dark">
+            <div class="wotd-label">
+              <span class="section-chip">Word of the Day</span>
+              <span class="wotd-date">June 1, 2026</span>
             </div>
-            <div class="owl-carousel birthday-mobile-carousel">
-              <div class="birthday-slide">
-                <article class="birthday-item">
-                  <img src="assets/images/potrait.png" alt="Birthday celebrant">
-                  <div class="birthday-copy">
-                    <h3>Jason Adetay Ebenizer</h3>
-                    <p>Research and Development</p>
-                    <span>12th August, 2025</span>
+            <div class="wotd-body">
+              <blockquote class="wotd-quote">
+                "It is either you are prepared to work for Abia with sincerity of purpose, or you remain in your comfort zone. Excellence is not a request — it is our standard."
+              </blockquote>
+              <div class="wotd-footer">
+                <div class="wotd-meta">
+                  <img src="assets/images/gov.jpg" alt="Governor Alex Otti">
+                  <div class="wotd-meta-text">
+                    <strong>His Excellency, Gov. Alex Otti</strong>
+                    <span>Governor of Abia State</span>
                   </div>
-                  <button class="icon-badge" type="button"><i class="bi bi-balloon-fill"></i></button>
-                  <button class="icon-plain" type="button"><i class="bi bi-three-dots-vertical"></i></button>
-                </article>
-                <article class="birthday-item">
-                  <img src="assets/images/potrait.png" alt="Birthday celebrant">
-                  <div class="birthday-copy">
-                    <h3>Jason Adetay Ebenizer</h3>
-                    <p>Research and Development</p>
-                    <span>12th August, 2025</span>
-                  </div>
-                  <button class="icon-badge" type="button"><i class="bi bi-balloon-fill"></i></button>
-                  <button class="icon-plain" type="button"><i class="bi bi-three-dots-vertical"></i></button>
-                </article>
-              </div>
-              <div class="birthday-slide">
-                <article class="birthday-item">
-                  <img src="assets/images/potrait.png" alt="Birthday celebrant">
-                  <div class="birthday-copy">
-                    <h3>Jason Adetay Ebenizer</h3>
-                    <p>Research and Development</p>
-                    <span>12th August, 2025</span>
-                  </div>
-                  <button class="icon-badge" type="button"><i class="bi bi-balloon-fill"></i></button>
-                  <button class="icon-plain" type="button"><i class="bi bi-three-dots-vertical"></i></button>
-                </article>
-                <article class="birthday-item">
-                  <img src="assets/images/potrait.png" alt="Birthday celebrant">
-                  <div class="birthday-copy">
-                    <h3>Jason Adetay Ebenizer</h3>
-                    <p>Research and Development</p>
-                    <span>12th August, 2025</span>
-                  </div>
-                  <button class="icon-badge" type="button"><i class="bi bi-balloon-fill"></i></button>
-                  <button class="icon-plain" type="button"><i class="bi bi-three-dots-vertical"></i></button>
-                </article>
+                </div>
               </div>
             </div>
-            <div class="carousel-dots birthday-mobile-dots" data-carousel-dots="birthday-mobile" aria-label="Birthday mobile slides"></div>
           </section>
+          </div>
 
-          <section class="quote-card card-panel image-card">
-            <div class="owl-carousel quote-carousel">
-              <article class="quote-slide">
-                <img src="assets/images/gov.jpg" alt="Governor">
-                <div class="image-overlay"></div>
-                <div class="image-copy">
-                  <p class="subtle-label mb-2">Governor's Corner</p>
-                  <h3>"It Is Either You Are Prepared to Work for Abia With Sincerity of Purpose, or You Remain in Your Comfort Zone"</h3>
-                  <strong>His Excellency, Gov. Alex Otti</strong>
-                  <span>Governor of Abia State</span>
-                </div>
-                <div class="image-meta">
-                  <span><i class="bi bi-hand-thumbs-up-fill"></i> 1</span>
-                  <span><i class="bi bi-chat"></i></span>
-                </div>
-              </article>
-              <article class="quote-slide">
-                <img src="assets/images/gov.jpg" alt="Governor">
-                <div class="image-overlay"></div>
-                <div class="image-copy">
-                  <p class="subtle-label mb-2">Governor's Corner</p>
-                  <h3>"It Is Either You Are Prepared to Work for Abia With Sincerity of Purpose, or You Remain in Your Comfort Zone"</h3>
-                  <strong>His Excellency, Gov. Alex Otti</strong>
-                  <span>Governor of Abia State</span>
-                </div>
-                <div class="image-meta">
-                  <span><i class="bi bi-hand-thumbs-up-fill"></i> 1</span>
-                  <span><i class="bi bi-chat"></i></span>
-                </div>
-              </article>
-              <article class="quote-slide">
-                <img src="assets/images/gov.jpg" alt="Governor">
-                <div class="image-overlay"></div>
-                <div class="image-copy">
-                  <p class="subtle-label mb-2">Governor's Corner</p>
-                  <h3>"It Is Either You Are Prepared to Work for Abia With Sincerity of Purpose, or You Remain in Your Comfort Zone"</h3>
-                  <strong>His Excellency, Gov. Alex Otti</strong>
-                  <span>Governor of Abia State</span>
-                </div>
-                <div class="image-meta">
-                  <span><i class="bi bi-hand-thumbs-up-fill"></i> 1</span>
-                  <span><i class="bi bi-chat"></i></span>
-                </div>
-              </article>
+          <div class="col-12 col-md-3">
+          <section class="gallery-card card-panel image-card h-100">
+            <div id="galleryCarousel" class="carousel slide gallery-carousel h-100" data-bs-ride="false" data-bs-wrap="true" data-bs-touch="true">
+              <div class="carousel-inner h-100">
+                <article class="carousel-item gallery-slide">
+                  <img src="assets/images/gallery.jpg" alt="Gallery">
+                  <div class="image-overlay dark"></div>
+                  <div class="gallery-header">
+                    <span class="gallery-badge"><i class="bi bi-images"></i> Gallery</span>
+                    <a class="gallery-view-all" href="#">View all <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                  <div class="gallery-caption">
+                    <span class="gallery-time"><i class="bi bi-clock"></i> 2 mins ago</span>
+                    <h3>Gov Alex Otti approves new salary scale for Abia health workers, effective May 1</h3>
+                  </div>
+                </article>
+                <article class="carousel-item gallery-slide">
+                  <img src="assets/images/meeting-photo.jpg" alt="Gallery">
+                  <div class="image-overlay dark"></div>
+                  <div class="gallery-header">
+                    <span class="gallery-badge"><i class="bi bi-images"></i> Gallery</span>
+                    <a class="gallery-view-all" href="#">View all <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                  <div class="gallery-caption">
+                    <span class="gallery-time"><i class="bi bi-clock"></i> 1 hr ago</span>
+                    <h3>State Executive 
+                      Council meets to review Q1 budget performance and 
+                      Council meets to review Q1 budget performance and 
+                      key projects</h3>
+                  </div>
+                </article>
+                <article class="carousel-item gallery-slide">
+                  <img src="assets/images/potrait.png" alt="Gallery">
+                  <div class="image-overlay dark"></div>
+                  <div class="gallery-header">
+                    <span class="gallery-badge"><i class="bi bi-images"></i> Gallery</span>
+                    <a class="gallery-view-all" href="#">View all <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                  <div class="gallery-caption">
+                    <span class="gallery-time"><i class="bi bi-clock"></i> 3 hrs ago</span>
+                    <h3>Governor meets community leaders on security and infrastructure development</h3>
+                  </div>
+                </article>
+              </div>
+              <div class="carousel-indicators gallery-dots">
+                <!-- <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+              </div>
             </div>
-            <div class="carousel-dots quote-dots" data-carousel-dots="quote" aria-label="Governor quote slides"></div>
           </section>
+          </div>
 
-          <section class="gallery-card card-panel image-card">
-            <div class="owl-carousel gallery-carousel">
-              <article class="gallery-slide">
-                <img src="assets/images/gallery.jpg" alt="Gallery">
-                <div class="image-overlay dark"></div>
-                <p class="gallery-label subtle-label">Gallery</p>
-                <div class="image-copy align-bottom">
-                  <span class="gallery-time">2 mins ago</span>
-                  <h3>Gov Alex Otti approves new salary scale for Abia health workers, effective May 1</h3>
-                </div>
-                <button class="play-button" type="button"><i class="bi bi-play-fill"></i></button>
-              </article>
-              <article class="gallery-slide">
-                <img src="assets/images/gallery.jpg" alt="Gallery">
-                <div class="image-overlay dark"></div>
-                <p class="gallery-label subtle-label">Gallery</p>
-                <div class="image-copy align-bottom">
-                  <span class="gallery-time">2 mins ago</span>
-                  <h3>Gov Alex Otti approves new salary scale for Abia health workers, effective May 1</h3>
-                </div>
-                <button class="play-button" type="button"><i class="bi bi-play-fill"></i></button>
-              </article>
-              <article class="gallery-slide">
-                <img src="assets/images/gallery.jpg" alt="Gallery">
-                <div class="image-overlay dark"></div>
-                <p class="gallery-label subtle-label">Gallery</p>
-                <div class="image-copy align-bottom">
-                  <span class="gallery-time">2 mins ago</span>
-                  <h3>Gov Alex Otti approves new salary scale for Abia health workers, effective May 1</h3>
-                </div>
-                <button class="play-button" type="button"><i class="bi bi-play-fill"></i></button>
-              </article>
-            </div>
-            <div class="carousel-dots gallery-dots" data-carousel-dots="gallery" aria-label="Gallery slides"></div>
-          </section>
-
-          <section class="events-card card-panel">
+          <div class="col-12 col-md-6">
+          <section class="events-card card-panel h-100">
             <div class="section-head">
               <h2>Events</h2>
               <a href="#">View all events <i class="bi bi-arrow-right"></i></a>
             </div>
-            <div class="owl-carousel events-carousel">
-              <article class="event-item">
-                <div class="event-photo">
-                  <img src="assets/images/home-events.jpg" alt="Event">
-                  <div class="event-date"><strong>17</strong><span>Feb</span></div>
+            <div id="eventsCarousel" class="carousel slide events-carousel" data-bs-ride="false" data-bs-wrap="true" data-bs-touch="true">
+              <div class="carousel-inner">
+                <div class="carousel-item">
+                  <article class="event-item">
+                    <img src="assets/images/home-events.jpg" alt="Community Gathering">
+                    <div class="event-overlay">
+                      <div class="event-top-row">
+                        <span class="event-tag">Community</span>
+                        <div class="event-date"><strong>17</strong><span>Feb</span></div>
+                      </div>
+                      <div class="event-content">
+                        <div class="event-meta-row"><i class="bi bi-clock"></i> 10:00 AM &ndash; 4:00 PM</div>
+                        <h3>Community Gathering</h3>
+                        <p class="event-desc">Bringing communities together for dialogue, culture, and shared progress across Abia State.</p>
+                        <div class="event-footer">
+                          <span class="event-location"><i class="bi bi-geo-alt-fill"></i> Lagos, Nigeria</span>
+                          <a class="cta-pill" href="#">View <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
                 </div>
-                <div class="event-body">
-                  <h3>Community Gathering</h3>
-                  <p>A time slot from midday until late afternoon. A time slot from midday until late afternoon. A time slot from midday until late afternoon.</p>
-                  <div class="event-footer">
-                    <a class="cta-pill" href="#">View <i class="bi bi-eye"></i></a>
-                    <span>Lagos, Nigeria <i class="bi bi-geo-alt"></i></span>
-                  </div>
+                <div class="carousel-item">
+                  <article class="event-item">
+                    <img src="assets/images/meeting-photo.jpg" alt="State Budget Review Forum">
+                    <div class="event-overlay">
+                      <div class="event-top-row">
+                        <span class="event-tag">Government</span>
+                        <div class="event-date"><strong>22</strong><span>Mar</span></div>
+                      </div>
+                      <div class="event-content">
+                        <div class="event-meta-row"><i class="bi bi-clock"></i> 9:00 AM &ndash; 1:00 PM</div>
+                        <h3>State Budget Review Forum</h3>
+                        <p class="event-desc">Quarterly stakeholder review of budget performance and expenditure milestones for 2025.</p>
+                        <div class="event-footer">
+                          <span class="event-location"><i class="bi bi-geo-alt-fill"></i> Umuahia, Abia</span>
+                          <a class="cta-pill" href="#">View <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
                 </div>
-              </article>
-              <article class="event-item">
-                <div class="event-photo">
-                  <img src="assets/images/home-events.jpg" alt="Event">
-                  <div class="event-date"><strong>17</strong><span>Feb</span></div>
+                <div class="carousel-item">
+                  <article class="event-item">
+                    <img src="assets/images/home-events.jpg" alt="Civil Service Capacity Building">
+                    <div class="event-overlay">
+                      <div class="event-top-row">
+                        <span class="event-tag">Training</span>
+                        <div class="event-date"><strong>05</strong><span>Apr</span></div>
+                      </div>
+                      <div class="event-content">
+                        <div class="event-meta-row"><i class="bi bi-clock"></i> 8:30 AM &ndash; 3:00 PM</div>
+                        <h3>Civil Service Capacity Building</h3>
+                        <p class="event-desc">Skills development workshop for senior civil servants on digital governance and service delivery.</p>
+                        <div class="event-footer">
+                          <span class="event-location"><i class="bi bi-geo-alt-fill"></i> Aba, Abia</span>
+                          <a class="cta-pill" href="#">View <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
                 </div>
-                <div class="event-body">
-                  <h3>Community Gathering</h3>
-                  <p>A time slot from midday until late afternoon. A time slot from midday until late afternoon. A time slot from midday until late afternoon.</p>
-                  <div class="event-footer">
-                    <a class="cta-pill" href="#">View <i class="bi bi-eye"></i></a>
-                    <span>Lagos, Nigeria <i class="bi bi-geo-alt"></i></span>
-                  </div>
-                </div>
-              </article>
-              <article class="event-item">
-                <div class="event-photo">
-                  <img src="assets/images/home-events.jpg" alt="Event">
-                  <div class="event-date"><strong>17</strong><span>Feb</span></div>
-                </div>
-                <div class="event-body">
-                  <h3>Community Gathering</h3>
-                  <p>A time slot from midday until late afternoon. A time slot from midday until late afternoon. A time slot from midday until late afternoon.</p>
-                  <div class="event-footer">
-                    <a class="cta-pill" href="#">View <i class="bi bi-eye"></i></a>
-                    <span>Lagos, Nigeria <i class="bi bi-geo-alt"></i></span>
-                  </div>
-                </div>
-              </article>
+              </div>
             </div>
-            <div class="carousel-dots events-dots" data-carousel-dots="events" aria-label="Event slides"></div>
-          </section>
-
-          <section class="appointee-card card-panel">
-            <div class="owl-carousel appointee-carousel">
-              <article class="appointee-item">
-                <img src="assets/images/minister.png" alt="Appointee">
-                <div class="appointee-body">
-                  <p class="subtle-label">New Appointees</p>
-                  <h3>Uju Kennedy Ohaneye</h3>
-                  <h4>Minister of Women Affairs</h4>
-                  <span>Date joined: 01-5/2025</span>
-                </div>
-              </article>
-              <article class="appointee-item">
-                <img src="assets/images/minister.png" alt="Appointee">
-                <div class="appointee-body">
-                  <p class="subtle-label">New Appointees</p>
-                  <h3>Uju Kennedy Ohaneye</h3>
-                  <h4>Minister of Women Affairs</h4>
-                  <span>Date joined: 01-5/2025</span>
-                </div>
-              </article>
-              <article class="appointee-item">
-                <img src="assets/images/minister.png" alt="Appointee">
-                <div class="appointee-body">
-                  <p class="subtle-label">New Appointees</p>
-                  <h3>Uju Kennedy Ohaneye</h3>
-                  <h4>Minister of Women Affairs</h4>
-                  <span>Date joined: 01-5/2025</span>
-                </div>
-              </article>
+            <div class="carousel-dots events-dots">
+              <!-- <button type="button" class="carousel-dot" data-slide-to="0" aria-label="Slide 1"></button>
+              <button type="button" class="carousel-dot" data-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" class="carousel-dot" data-slide-to="2" aria-label="Slide 3"></button> -->
             </div>
-            <div class="carousel-dots appointee-dots" data-carousel-dots="appointee" aria-label="Appointee slides"></div>
           </section>
+          </div>
 
-          <section class="download-card card-panel">
+          <div class="col-12 col-md-3">
+          <section class="appointee-card card-panel h-100">
+            <div id="appointeeCarousel" class="carousel slide appointee-carousel" data-bs-ride="false" data-bs-wrap="true" data-bs-touch="true">
+              <div class="carousel-inner">
+                <div class="carousel-item">
+                  <article class="appointee-item">
+                    <img src="assets/images/minister.png" alt="Appointee">
+                    <div class="appointee-body">
+                      <p class="subtle-label">New Appointees</p>
+                      <h3>Uju Kennedy Ohaneye</h3>
+                      <h4>Minister of Women Affairs</h4>
+                      <span>Date joined: 01-5/2025</span>
+                    </div>
+                  </article>
+                </div>
+                <div class="carousel-item">
+                  <article class="appointee-item">
+                    <img src="assets/images/minister.png" alt="Appointee">
+                    <div class="appointee-body">
+                      <p class="subtle-label">New Appointees</p>
+                      <h3>Uju Kennedy Ohaneye</h3>
+                      <h4>Minister of Women Affairs</h4>
+                      <span>Date joined: 01-5/2025</span>
+                    </div>
+                  </article>
+                </div>
+                <div class="carousel-item">
+                  <article class="appointee-item">
+                    <img src="assets/images/minister.png" alt="Appointee">
+                    <div class="appointee-body">
+                      <p class="subtle-label">New Appointees</p>
+                      <h3>Uju Kennedy Ohaneye</h3>
+                      <h4>Minister of Women Affairs</h4>
+                      <span>Date joined: 01-5/2025</span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="carousel-indicators appointee-dots">
+                <!-- <button type="button" data-bs-target="#appointeeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#appointeeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#appointeeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+              </div>
+            </div>
+          </section>
+          </div>
+
+          <div class="col-12 col-md-3">
+          <section class="download-card card-panel h-100">
             <div class="section-head">
               <div>
                 <p class="subtle-label mb-1">Forms and Downloads</p>
@@ -427,8 +392,10 @@
               <a href="#"><i class="bi bi-file-earmark-pdf-fill"></i><span>Communication</span><i class="bi bi-download"></i></a>
             </div>
           </section>
+          </div>
 
-          <section class="support-card card-panel image-card">
+          <div class="col-12 col-md-3">
+          <section class="support-card card-panel image-card h-100">
             <img src="assets/images/support.png" alt="Support">
             <div class="image-overlay dark"></div>
             <div class="image-copy align-bottom">
@@ -438,8 +405,10 @@
             </div>
             <a class="arrow-link" href="#" aria-label="Open support form"><img src="assets/images/arrow-right.svg" alt=""></a>
           </section>
+          </div>
 
-          <section class="numbers-card card-panel">
+          <div class="col-12 col-md-3">
+          <section class="numbers-card card-panel h-100">
             <div class="section-head">
               <h2>Government in numbers</h2>
             </div>
@@ -452,8 +421,10 @@
               <a class="disabled" href="#"><span><img src="assets/images/ballIcon.png" alt=""> Ventures</span><em>2</em><i class="bi bi-chevron-right"></i></a>
             </div>
           </section>
+          </div>
 
-          <section class="quick-links-card card-panel card-dark">
+          <div class="col-12 col-md-3">
+          <section class="quick-links-card card-panel card-dark h-100">
             <div class="section-head">
               <h2>Quick Links</h2>
             </div>
@@ -466,6 +437,7 @@
               <a class="is-disabled quick-link-training" href="#"><span><img src="assets/images/trainingIcon.png" alt=""> Training Portal</span><i class="bi bi-chevron-right"></i></a>
             </div>
           </section>
+          </div>
         </div>
       </div>
     </section>
@@ -473,10 +445,8 @@
 
   <div data-include="partials/footer.html"></div>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="js/include-partials.js?v=20260514c"></script>
-  <script src="js/main.js?v=20260514c"></script>
+  <script src="js/include-partials.js?v=20260601c"></script>
+  <script src="js/main.js?v=20260623i"></script>
 </body>
 </html>
